@@ -1,0 +1,9 @@
+{
+  "name":"SHAHPURA CLUB",
+  "short_name":"SHAHPURA CLUB",
+  "start_url":"./index.html",
+  "display":"standalone",
+  "background_color":"#f5f7fb",
+  "theme_color":"#1769e0",
+  "description":"Free marketplace MVP for customers, sellers and admin"
+}

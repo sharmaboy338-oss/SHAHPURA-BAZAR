@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1769e0">
+<link rel="manifest" href="manifest.json">
+<title>SHAHPURA CLUB</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <div class="brand">🛍️ SHAHPURA CLUB</div>
+    <div class="search"><input id="search" placeholder="Product search करें..." oninput="renderProducts()"></div>
+    <div class="head-actions">
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('orders')">Orders</button>
+      <button onclick="showPage('cart')">🛒 <span id="cartCount">0</span></button>
+      <button onclick="showPage('account')">Account</button>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button onclick="filterCat('All')">All</button>
+  <button onclick="filterCat('Fashion')">Fashion</button>
+  <button onclick="filterCat('Electronics')">Electronics</button>
+  <button onclick="filterCat('Home')">Home</button>
+  <button onclick="filterCat('Beauty')">Beauty</button>
+</nav>
+
+<main>
+<section id="home" class="page">
+  <div class="hero">
+    <div><h1>SHAHPURA CLUB</h1><p>Customer और Seller दोनों के लिए Free Marketplace MVP</p>
+    <button class="primary" onclick="document.getElementById('products').scrollIntoView()">Shopping शुरू करें</button></div>
+    <div class="hero-icon">🛒</div>
+  </div>
+  <div class="section-head"><h2>Products</h2><span id="catLabel">All</span></div>
+  <div id="products" class="grid"></div>
+</section>
+
+<section id="cart" class="page hidden">
+  <h2>🛒 मेरा Cart</h2><div id="cartBox"></div>
+</section>
+
+<section id="orders" class="page hidden">
+  <h2>📦 My Orders</h2><div id="ordersBox"></div>
+</section>
+
+<section id="account" class="page hidden">
+  <h2>👤 Account</h2>
+  <div id="accountBox"></div>
+</section>
+
+<section id="seller" class="page hidden">
+  <h2>🏪 Seller Panel</h2>
+  <div id="sellerBox"></div>
+</section>
+
+<section id="admin" class="page hidden">
+  <h2>⚙️ Admin Panel</h2>
+  <div id="adminBox"></div>
+</section>
+</main>
+
+<div id="modal" class="modal hidden"><div class="modal-card"><button class="close" onclick="closeModal()">✕</button><div id="modalBody"></div></div></div>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
